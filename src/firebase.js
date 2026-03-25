@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyACiDV_qEmhpEOZ-21lZhN3YsUhM5FLG1k",
-  authDomain: "finflow-b4cc8.firebaseapp.com",
-  projectId: "finflow-b4cc8",
-  storageBucket: "finflow-b4cc8.firebasestorage.app",
-  messagingSenderId: "472754382138",
-  appId: "1:472754382138:web:9227dbb43070c05227dc03"
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID
 };
 
 const app = initializeApp(firebaseConfig);
