@@ -1,0 +1,151 @@
+.transactions-page {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.transactions-container {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.transactions-filters {
+  display: flex;
+  gap: 8px;
+  background: rgba(0,0,0,0.2);
+  padding: 6px;
+  border-radius: var(--radius-sm);
+  width: fit-content;
+  border: 1px solid var(--border-glass);
+}
+
+.filter-btn {
+  padding: 8px 16px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  transition: var(--transition);
+}
+
+.filter-btn:hover {
+  color: var(--text-main);
+  background: var(--bg-glass-hover);
+}
+
+.filter-btn.active {
+  background: var(--bg-base);
+  color: var(--accent-primary);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+/* Table Styles */
+.table-responsive {
+  overflow-x: auto;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.transactions-table th {
+  color: var(--text-muted);
+  font-weight: 500;
+  font-size: 0.85rem;
+  padding: 16px;
+  border-bottom: 1px solid var(--border-glass);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.transactions-table td {
+  padding: 16px;
+  border-bottom: 1px solid var(--border-glass);
+  font-size: 0.95rem;
+}
+
+.table-row {
+  transition: var(--transition);
+}
+
+.table-row:hover {
+  background: var(--bg-glass-hover);
+}
+
+.table-row:last-child td {
+  border-bottom: none;
+}
+
+.date-cell {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.category-badge {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 4px 10px;
+  border-radius: var(--radius-full);
+  font-size: 0.85rem;
+  border: 1px solid var(--border-glass);
+}
+
+.type-badge {
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.type-badge.income {
+  background: var(--success-bg);
+  color: var(--success);
+}
+
+.type-badge.expense {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
+
+.amount-col {
+  text-align: right;
+  font-family: var(--font-display);
+  font-weight: 600;
+}
+
+.amount-col.income {
+  color: var(--success);
+}
+
+.amount-col.expense {
+  color: var(--text-main);
+}
+
+.actions-col {
+  text-align: right;
+  width: 60px;
+}
+
+.delete-btn {
+  color: var(--text-muted-darker);
+  width: 32px;
+  height: 32px;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.delete-btn svg {
+  width: 18px;
+  height: 18px;
+}
+
+.delete-btn:hover {
+  background: var(--danger-bg);
+  color: var(--danger);
+}
